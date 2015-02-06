@@ -1,0 +1,15 @@
+{
+  "name": "basster/project-euler",
+  "description": "Project Euler Repo",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ole Rößner",
+      "email": "oroessner@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "4.5.*"
+  }
+}
