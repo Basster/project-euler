@@ -21,11 +21,12 @@ class EulerRunner
     public function run()
     {
         $this->writeln('ProjectEuler Runner');
+        $this->writeln();
+        $this->writeln('| Problem       | time          |');
+        $this->writeln('| ------------- | ------------- |');
 
         for ($i = 1; $i <= $this->numProblems; $i++) {
             $className = 'Basster\\Euler' . $i;
-
-            $this->write(sprintf('running %s', $className));
 
             /**
              * @var Euler $impl
@@ -35,17 +36,12 @@ class EulerRunner
             $impl->getSolution();
             $this->stopwatch->stop($className);
 
-            $this->writeln(sprintf(' in %d ms', $this->stopwatch->getEvent($className)->getDuration()));
+            $this->writeln(sprintf('| %s  | %d ms  |', $className, $this->stopwatch->getEvent($className)->getDuration()));
         }
     }
 
-    private function writeln($text)
+    private function writeln($text = '')
     {
         echo $text . PHP_EOL;
-    }
-
-    private function write($text)
-    {
-        echo $text;
     }
 }
