@@ -17,5 +17,8 @@
   },
   "require-dev": {
     "phpunit/phpunit": "4.5.*"
+  },
+  "require": {
+    "symfony/stopwatch": "~2.6"
   }
 }

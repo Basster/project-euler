@@ -4,15 +4,15 @@
 namespace Basster;
 
 
-class Euler2
+class Euler2 implements Euler
 {
 
-    public static function getSum($max)
+    public function getSum($max)
     {
         return array_sum(self::fibonacci($max));
     }
 
-    public static function fibonacci($n)
+    public function fibonacci($n)
     {
         $fib = [1, 2];
         $next = $fib[1] + $fib[0];
@@ -25,12 +25,15 @@ class Euler2
         return $fib;
     }
 
-    public static function getEvenSum($int)
+    public function getSolution()
+    {
+        return $this->getEvenSum(4000000);
+    }
+
+    public function getEvenSum($int)
     {
         return array_sum(array_filter(self::fibonacci($int), function ($value) {
             return (!($value & 1));
         }));
     }
-
-
 }

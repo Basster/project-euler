@@ -4,8 +4,14 @@
 namespace Basster;
 
 
-class Euler3
+class Euler3 implements Euler
 {
+
+    public function getSolution()
+    {
+        $primes = $this->primes(600851475143);
+        return $primes[count($primes) - 1];
+    }
 
     public function primes($num)
     {

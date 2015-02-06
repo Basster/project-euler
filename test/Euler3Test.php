@@ -29,8 +29,7 @@ class Euler3Test extends \PHPUnit_Framework_TestCase
      */
     public function testProblem()
     {
-        $primes = $this->euler->primes(600851475143);
-        $this->assertEquals(6857, $primes[count($primes) - 1]);
+        $this->assertEquals(6857, $this->euler->getSolution());
     }
 
     /**

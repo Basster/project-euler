@@ -3,9 +3,14 @@
 namespace Basster;
 
 
-class Euler1 {
+class Euler1 implements Euler
+{
+    public function getSolution()
+    {
+        return $this->getSum(1000);
+    }
 
-    public static function getSum($maxNum)
+    public function getSum($maxNum)
     {
         $sum = 0;
         for ($i = 1; $i < $maxNum; $i++) {
@@ -16,7 +21,7 @@ class Euler1 {
         return $sum;
     }
 
-    private static function dividableBy($num, $divisor)
+    private function dividableBy($num, $divisor)
     {
         return $num % $divisor === 0;
     }

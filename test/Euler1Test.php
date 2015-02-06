@@ -6,10 +6,21 @@ namespace Basster\Test;
 
 use Basster\Euler1;
 
-class Euler1Test extends \PHPUnit_Framework_TestCase {
+class Euler1Test extends \PHPUnit_Framework_TestCase
+{
+    /**
+     * @var Euler1
+     */
+    private $euler;
+
+    public function setUp()
+    {
+        $this->euler = new Euler1;
+    }
+
     public function testExample()
     {
-        $this->assertEquals(23, Euler1::getSum(10));
+        $this->assertEquals(23, $this->euler->getSum(10));
     }
 
     /**
@@ -17,6 +28,6 @@ class Euler1Test extends \PHPUnit_Framework_TestCase {
      */
     public function testProblem()
     {
-        $this->assertEquals(233168, Euler1::getSum(1000));
+        $this->assertEquals(233168, $this->euler->getSolution());
     }
 }
