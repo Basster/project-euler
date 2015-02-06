@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Basster\Euler2;
+namespace Basster;
 
 
 class Euler2

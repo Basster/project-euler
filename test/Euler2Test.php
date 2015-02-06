@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Basster\Test\Euler2;
+namespace Basster\Test;
 
 
-use Basster\Euler2\Euler2;
+use Basster\Euler2;
 
 class Euler2Test extends \PHPUnit_Framework_TestCase
 {
