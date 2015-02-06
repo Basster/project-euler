@@ -25,6 +25,9 @@ class Euler2Test extends \PHPUnit_Framework_TestCase
         $this->assertEquals(44, Euler2::getEvenSum(100));
     }
 
+    /**
+     * 0s (not measurable) from PhpStorm Statistics on an i5-4210H @ 2.9GHz.
+     */
     public function testProblem()
     {
         $this->assertEquals(4613732, Euler2::getEvenSum(4000000));
